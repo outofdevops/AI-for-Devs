@@ -23,7 +23,7 @@ C --> D{Validate file type & user ID}
 D -- Valid --> E[Generate pre-signed PUT URL]
 D -- Invalid --> F[Return error: Unsupported file type]
 
-E --> G[Client uploads file to S3 Bucket (uploads/userId/timestamp)]
+E --> G[Client uploads file to S3 Bucket (uploads userId timestamp)]
 
 G --> H[GuardDuty Malware Scan]
 H -->|No threats| I[Tag object as CLEAN]
